@@ -1,0 +1,18 @@
+
+<ul>
+    <!-- [ngStyle]="{'background-image': 'url(' + artist.backgroundUrl + ')'}" -->
+  <li *ngFor="let artist of artists; let i = index" [style.background-color] ="artist.backgroundColor"  [class.active]="status === i" (click)="setIndex(i,artist.componentName)">
+    <h3 class="text-white">{{ artist.name }}</h3>
+    <div class="section-content h-full w-full text-white fadein-content">
+      <div class="inner flex items-center">
+        <div class="space-y-16">
+          <h2 class="">{{ artist.name }}</h2>
+          <div class="fadein-content items-center">
+           <ng-container *ngComponentOutlet="content"></ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
