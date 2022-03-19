@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="flex justify-center h-screen items-center">
+  <mat-card>
+    <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+      <div class="space-y-2">
+        <mat-form-field appearance="outline" class="kc-form w-full">
+          <mat-label class="text-dark-text">Email</mat-label>
+          <input type="email" class="border-dark-border" matInput placeholder="Ex. pat@example.com" formControlName="email" />
+          <mat-error *ngIf="loginForm.get('email').errors?.required">
+            We need an email address to log you in
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email').errors?.email">
+            We need a valid email address to log you in
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="kc-form w-full">
+          <mat-label class="text-dark-text">Password</mat-label>
+          <input type="password" class="border-dark-border" matInput placeholder="Ex. pat@example.com" formControlName="password"/>
+          <mat-error *ngIf="loginForm.get('password').errors?.required">
+            We need password to log you in
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button class="kc-leading kc-button-primary text-lg w-full"> Sign In </button>
+    </form>
+  </mat-card>
+</div>

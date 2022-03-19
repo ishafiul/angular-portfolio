@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiEndPoint: 'https://eblogex.herokuapp.com/api/',
 };
