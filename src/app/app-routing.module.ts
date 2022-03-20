@@ -26,7 +26,7 @@ const routes: Routes = [
     children : blogChildRoute
   },
   {
-    path:'**',
+    path:'ggg',
     component: NotFoundComponent
   }
 ];

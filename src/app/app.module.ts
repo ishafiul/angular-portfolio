@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {AuthModule} from "./auth/auth.module";
 import {RouterModule} from "@angular/router";
+import {HashLocationStrategy, LocationStrategy, PathLocationStrategy} from "@angular/common";
+import {APP_BASE_HREF} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,12 @@ import {RouterModule} from "@angular/router";
     AuthModule,
     RouterModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass:HashLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
