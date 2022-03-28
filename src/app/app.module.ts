@@ -26,10 +26,10 @@ import {ApiCallInterceptor} from "./shared/interceptors/api-call.interceptor";
     RouterModule
   ],
   providers: [
-    /*{
+    {
       provide: LocationStrategy,
       useClass:HashLocationStrategy
-    },*/
+    },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ApiCallInterceptor,
