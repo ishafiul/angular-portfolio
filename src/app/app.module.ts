@@ -8,8 +8,9 @@ import { SharedModule } from './shared/shared.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {AuthModule} from "./auth/auth.module";
 import {RouterModule} from "@angular/router";
-import {HashLocationStrategy, LocationStrategy, PathLocationStrategy} from "@angular/common";
-import {APP_BASE_HREF} from "@angular/common";
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {ApiCallInterceptor} from "./shared/interceptors/api-call.interceptor";
 
 @NgModule({
   declarations: [
@@ -25,10 +26,15 @@ import {APP_BASE_HREF} from "@angular/common";
     RouterModule
   ],
   providers: [
-    {
+    /*{
       provide: LocationStrategy,
       useClass:HashLocationStrategy
-    }
+    },*/
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiCallInterceptor,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent]
 })

@@ -1,9 +1,9 @@
 
 <ul>
     <!-- [ngStyle]="{'background-image': 'url(' + artist.backgroundUrl + ')'}" -->
-  <li *ngFor="let artist of artists; let i = index" [style.background-color] ="artist.backgroundColor"  [class.active]="status === i" (click)="setIndex(i,artist.componentName)">
+  <li *ngFor="let artist of artists; let i = index;let even = even" [style.background-color] ="artist.backgroundColor"  [class.active]="status === i" (click)="setIndex(i,artist.componentName)">
     <h3 class="text-white">{{ artist.name }}</h3>
-    <div class="section-content h-full w-full text-white fadein-content">
+    <div   class="section-content h-full text-white w-full">
       <div class="inner flex items-center">
         <div class="space-y-16">
           <h2 class="">{{ artist.name }}</h2>

@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import {BlogLayoutComponent} from "./shared/layout/blog-layout/blog-layout.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
+import {AuthGuard} from "./shared/guards/auth.guard";
 
 const blogChildRoute: Routes =[
   {
     path:'',
-    loadChildren:()=>import('./blog/blog.module').then(m=>m.BlogModule)
+    loadChildren:()=>import('./blog/blog.module').then(m=>m.BlogModule),
+    canActivate: [AuthGuard]
   }
 ]
 
@@ -23,7 +25,8 @@ const routes: Routes = [
   {
     path: 'blog',
     component: BlogLayoutComponent,
-    children : blogChildRoute
+    children : blogChildRoute,
+
   },
   {
     path:'ggg',

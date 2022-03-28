@@ -17,23 +17,23 @@ export class HomeComponent implements OnInit {
     switch(componentName){
       case "AboutComponent":{
         this.content = AboutComponent
-        break; 
+        break;
       }
       case "SkillComponent":{
         this.content = SkillComponent
-        break; 
+        break;
       }
       case "MyworkComponent":{
         this.content = MyworkComponent
-        break; 
+        break;
       }
       case "ContactmeComponent":{
         this.content = ContactmeComponent
-        break; 
+        break;
       }
       default:{
         this.content = ''
-        break; 
+        break;
       }
     }
  }
@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
           "https://open.spotify.com/embed/artist/205i7E8fNVfojowcQSfK9m?utm_source=generator"
       },
       backgroundUrl: "https://assets.codepen.io/152347/dom-dolla.jpg",
-      backgroundColor:"#051e3e"
+      backgroundColor:"#FF4655"
     },
     {
       componentName:'SkillComponent',
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
           "https://open.spotify.com/embed/artist/0aA1GTrIMutjIh4GlPPUVN?utm_source=generator"
       },
       backgroundUrl: "https://assets.codepen.io/152347/crooked-colours.jpg",
-      backgroundColor:"#251e3e"
+      backgroundColor:"#0F1923"
     },
     {
       componentName:'MyworkComponent',
@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
           "https://open.spotify.com/embed/artist/4OSArit7O2Jaj4mgf3YN7A?utm_source=generator"
       },
       backgroundUrl: "https://assets.codepen.io/152347/mallrat.jpg",
-      backgroundColor:"#451e3e "
+      backgroundColor:"#FF4655"
     },
     {
       componentName:'ContactmeComponent',
@@ -85,9 +85,9 @@ export class HomeComponent implements OnInit {
           "https://open.spotify.com/embed/artist/2Ltr0s15RyvsjqWzSmiSRs?utm_source=generator"
       },
       backgroundUrl: "https://assets.codepen.io/152347/allday.jpg",
-      backgroundColor:"#651e3e"
+      backgroundColor:"#0F1923"
     },
-    
+
   ]
   constructor() { }
 

@@ -37,8 +37,20 @@ $portfolio-theme: mat.define-light-theme((
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: poppins;
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+body {
+  margin: 0;
+  font-family: poppins, sans-serif;
+  color: #231F20;
+  background-color: #ECE8E1;
+  font-weight: bold;
+}
 .fadein-content{
   animation: .5s ease 0s normal forwards 1 fadein;
 }
