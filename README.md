@@ -1,5 +1,5 @@
 # Portfolio
-## live: https://ishafiul.github.io/angular-portfolio/
+## live: https://shafi-org.github.io/angular-portfolio/#/
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Development server
