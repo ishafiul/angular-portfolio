@@ -35,7 +35,7 @@
 
       content: "";
       position: absolute;
-      z-index: 20;
+      z-index: 1;
       top: 0;
       left: 0;
       width: 100%;
@@ -54,28 +54,12 @@
     }
   }
 
-  h2 {
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    @media only screen and (min-width: 768px) {
-      font-size: 48px;
-      line-height: 48px;
-    }
-
-    @media only screen and (min-width: 1280px) {
-      font-size: 64px;
-      line-height: 64px;
-    }
-  }
 
   h3 {
     font-weight: bold;
     white-space: nowrap;
     position: absolute;
-    z-index: 30;
+    z-index: 2;
     opacity: 1;
     top: 50%;
     left: 50%;
@@ -98,10 +82,9 @@
 
   .section-content {
     position: relative;
-    z-index: 30;
+    z-index: 3;
     opacity: 0;
     width: 100%;
-    transition: all 0.3s 0.3s ease-in-out;
 
     .active & {
       opacity: 1;
@@ -109,27 +92,25 @@
 
     .inner {
       position: absolute;
-
+      top: 0;
       left: 0;
       bottom: 0;
-      padding: 20px;
       opacity: 0;
-      height: 100vh;
       transition: opacity 0.3s ease-in-out;
 
-    //   @media only screen and (min-width: 768px) {
-    //     grid-auto-flow: column;
-    //     grid-template-columns: calc(100% - 340px) 300px;
-    //     grid-column-gap: 40px;
-    //     padding: 40px;
-    //   }
+       @media only screen and (min-width: 768px) {
+         grid-auto-flow: column;
+         grid-template-columns: calc(100% - 340px) 300px;
+         grid-column-gap: 40px;
+         padding: 40px;
+       }
 
-    //   @media only screen and (min-width: 1280px) {
-    //     grid-auto-flow: column;
-    //     grid-template-columns: 460px 200px;
-    //     grid-column-gap: 40px;
-    //     padding: 40px;
-    //   }
+       @media only screen and (min-width: 1280px) {
+         grid-auto-flow: column;
+         grid-template-columns: 460px 200px;
+         grid-column-gap: 40px;
+         padding: 40px;
+       }
 
       .active & {
         opacity: 1;
@@ -138,3 +119,43 @@
   }
 
 
+  #follower {
+    position: absolute;
+    top: -45px;
+    left: -45px;
+  }
+  #ds{
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 80px;
+    transition: transform .04s ease-in-out;
+  }
+  #td{
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 80px;
+    transition: transform .05s ease-in-out;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-300
+
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #7d7d7d;
+    border-radius: 30px;
+
+    &:hover {
+      background: #555;
+      width: 10px;
+      height: 10px;
+
+    }
+  }

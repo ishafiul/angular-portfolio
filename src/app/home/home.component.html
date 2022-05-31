@@ -1,18 +1,20 @@
 
-<ul>
+  <div class="z-20 relative flex justify-center items-center " id="follower">
+    <div class="w-1 h-1 rounded-full bg-white " id="ds"></div>
+    <div class="w-8 h-8 rounded-full border" id="td"></div>
+  </div>
+
+  <ul id="ul" class="-z-20 ">
     <!-- [ngStyle]="{'background-image': 'url(' + artist.backgroundUrl + ')'}" -->
-  <li *ngFor="let artist of artists; let i = index;let even = even" [style.background-color] ="artist.backgroundColor"  [class.active]="status === i" (click)="setIndex(i,artist.componentName)">
-    <h3 class="text-white">{{ artist.name }}</h3>
-    <div   class="section-content h-full text-white w-full">
-      <div class="inner flex items-center">
-        <div class="space-y-16">
-          <h2 class="">{{ artist.name }}</h2>
-          <div class="fadein-content items-center">
-           <ng-container *ngComponentOutlet="content"></ng-container>
+    <li class="" *ngFor="let artist of artists; let i = index;let even = even" [style.background-color] ="artist.backgroundColor"  [class.active]="status === i" (click)="setIndex(i,artist.componentName)">
+      <h3 class="text-white">{{ artist.name }}</h3>
+      <div   class="section-content h-full text-white w-full ">
+        <div class="inner flex h-full w-full overflow-y-auto overflow-x-hidden">
+          <div class="">
+            <ng-container *ngComponentOutlet="content" class=""></ng-container>
           </div>
         </div>
       </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
 

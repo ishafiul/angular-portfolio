@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
           "https://open.spotify.com/embed/artist/205i7E8fNVfojowcQSfK9m?utm_source=generator"
       },
       backgroundUrl: "https://assets.codepen.io/152347/dom-dolla.jpg",
-      backgroundColor:"#FF4655"
+      backgroundColor:"#0f2319"
     },
     {
       componentName:'SkillComponent',
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
           "https://open.spotify.com/embed/artist/0aA1GTrIMutjIh4GlPPUVN?utm_source=generator"
       },
       backgroundUrl: "https://assets.codepen.io/152347/crooked-colours.jpg",
-      backgroundColor:"#0F1923"
+      backgroundColor:"#0f1923"
     },
     {
       componentName:'MyworkComponent',
@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
           "https://open.spotify.com/embed/artist/4OSArit7O2Jaj4mgf3YN7A?utm_source=generator"
       },
       backgroundUrl: "https://assets.codepen.io/152347/mallrat.jpg",
-      backgroundColor:"#FF4655"
+      backgroundColor:"#230f19"
     },
     {
       componentName:'ContactmeComponent',
@@ -85,7 +85,7 @@ export class HomeComponent implements OnInit {
           "https://open.spotify.com/embed/artist/2Ltr0s15RyvsjqWzSmiSRs?utm_source=generator"
       },
       backgroundUrl: "https://assets.codepen.io/152347/allday.jpg",
-      backgroundColor:"#0F1923"
+      backgroundColor:"#23190f"
     },
 
   ]
@@ -93,6 +93,26 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.content = AboutComponent
+    const hola = document.getElementById('ul')
+    // @ts-ignore
+    hola.addEventListener('mousemove', e => {
+      let x = e.pageX-10;
+      let y = (e.pageY - window.pageYOffset)-10;
+      // @ts-ignore
+      //document.getElementById('follower').style.transform =`translate3d(${x}px, ${y}px, 0)`;
+      // @ts-ignore
+      document.getElementById('ds').style.transform =`translate3d(${x}px, ${y}px, 0)`;
+      // @ts-ignore
+      document.getElementById('td').style.transform =`translate3d(${x}px, ${y}px, 0)`;
+    });
+    // @ts-ignore
+    hola.addEventListener('mousemove', e => {
+      let x = e.pageX;
+      let y = e.pageY - window.pageYOffset;
+      // @ts-ignore
+      //document.getElementById('follower').style.transform =`translate3d(${x}px, ${y}px, 0)`;
+
+    });
   }
 
 }
