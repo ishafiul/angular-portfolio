@@ -14,3 +14,46 @@ h2 {
     line-height: 64px;
   }
 }
+
+::ng-deep .mat-tab-labels {
+  min-width: auto !important;
+  button{
+    color: white;
+  }
+  div {
+    &.mat-tab-label-active {
+      background: #1C2636;
+      border-top: .5px solid rgba(208, 208, 208, 0.45);
+      border-bottom: .5px solid rgba(208, 208, 208, 0.32);
+      @apply rounded border-t-[0.01rem] shadow-xl;
+    }
+    .mat-tab-label-content {
+      color: #fff !important;
+    }
+  }
+}
+
+::ng-deep .mat-tab-group{
+  &.mat-primary {
+    .mat-ink-bar {
+      background-color: #8395fc;
+    }
+  }
+}
+
+::ng-deep .mat-tab-body-wrapper{
+}
+
+::ng-deep .mat-tab-label{
+  opacity: 1 !important;
+}
+.job-card{
+  border-top: .5px solid rgba(208, 208, 208, 0.45);
+  border-bottom: .5px solid rgba(208, 208, 208, 0.2);
+  background: #1C2636;
+  @apply rounded shadow-xl p-6
+}
+.glass-border{
+  border-top: .5px solid rgba(208, 208, 208, 0.45);
+  border-bottom: .5px solid rgba(208, 208, 208, 0.2);
+}

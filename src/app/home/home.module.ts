@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { SkillComponent } from './skill/skill.component';
 import { MyworkComponent } from './mywork/mywork.component';
 import { ContactmeComponent } from './contactme/contactme.component';
+import {MatTabsModule} from "@angular/material/tabs";
 
 
 @NgModule({
@@ -17,10 +18,11 @@ import { ContactmeComponent } from './contactme/contactme.component';
     MyworkComponent,
     ContactmeComponent
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        MatTabsModule
+    ],
   exports:[
     HomeComponent
   ]

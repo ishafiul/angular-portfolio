@@ -29,9 +29,6 @@
     background-repeat: no-repeat;
     background-position: top center;
     overflow: hidden;
-    h3{
-      @apply hover:scale-50 hover:text-amber-400;
-    }
     &:before {
 
       content: "";
@@ -49,7 +46,7 @@
       flex: 6;
       cursor: default;
       &:before {
-        background: linear-gradient(300deg, rgba(2,0,36,0) 0%, rgba(255, 255, 255, 0.1) 40%, rgba(0,212,255,0) 100%);
+        background: linear-gradient(300deg, rgba(2,0,36,0) 0%, rgba(255, 255, 255, 0.5) 20%, rgba(0,212,255,0) 100%);
     }
     }
   }
@@ -69,9 +66,6 @@
 
     text-transform: uppercase;
     transform: translate(-50%, -50%) rotate(0deg);
-    &:hover{
-
-    }
     @media only screen and (min-width: 1280px) {
       top: 100%;
       left: 50%;
@@ -120,6 +114,18 @@
 
       .active & {
         opacity: 1;
+        padding: 1rem;
+        color: white;
+        border-width: 2px;
+        border-style: solid;
+        border-image:
+          linear-gradient(
+              to bottom,
+            black,
+              #888888,
+              rgba(0, 0, 0, 0)
+          ) 1 100%;
+
       }
     }
   }
@@ -164,4 +170,9 @@
       height: 10px;
 
     }
+  }
+
+
+  .box{
+    @apply absolute w-40 h-60 bg-amber-400 opacity-80
   }
