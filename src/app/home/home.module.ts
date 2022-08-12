@@ -8,6 +8,10 @@ import { SkillComponent } from './skill/skill.component';
 import { MyworkComponent } from './mywork/mywork.component';
 import { ContactmeComponent } from './contactme/contactme.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatButtonModule} from "@angular/material/button";
+import {MatRippleModule} from "@angular/material/core";
+import {MatIconModule} from "@angular/material/icon";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 
 @NgModule({
@@ -18,11 +22,15 @@ import {MatTabsModule} from "@angular/material/tabs";
     MyworkComponent,
     ContactmeComponent
   ],
-    imports: [
-        CommonModule,
-        HomeRoutingModule,
-        MatTabsModule
-    ],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatRippleModule,
+    MatIconModule,
+    MatFormFieldModule
+  ],
   exports:[
     HomeComponent
   ]
