@@ -12,6 +12,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatRippleModule} from "@angular/material/core";
 import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 @NgModule({
@@ -22,15 +25,18 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     MyworkComponent,
     ContactmeComponent
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    MatTabsModule,
-    MatButtonModule,
-    MatRippleModule,
-    MatIconModule,
-    MatFormFieldModule
-  ],
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        MatTabsModule,
+        MatButtonModule,
+        MatRippleModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatProgressSpinnerModule
+    ],
   exports:[
     HomeComponent
   ]

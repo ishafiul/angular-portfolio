@@ -14,3 +14,75 @@ h2 {
     line-height: 64px;
   }
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #24252C;
+  -webkit-box-shadow: none !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+
+  &:hover {
+    width: 10px;
+    height: 10px;
+  }
+}
+.kc-form-field {
+  @apply w-full;
+}
+::ng-deep input.mat-input-element {
+  color: #484a4c;
+}
+
+/* Change label color on focused */
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #646464 !important;
+}
+
+::ng-deep input.mat-input-element {
+  color: #ffffff;
+}
+/* underline border color on focused */
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+  background-color: #ffffff !important;
+}
+
+::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
+  border-bottom: #BBB 1px solid;
+  background-color: transparent;
+}
+
+::ng-deep.mat-form-field-appearance-fill .mat-form-field-label {
+  color: #ffffff !important;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+
+  &:hover {
+    width: 10px;
+    height: 10px;
+  }
+}
+.glass-border{
+  border-top: .5px solid rgba(208, 208, 208, 0.45);
+  border-bottom: .5px solid rgba(208, 208, 208, 0.2);
+}
+.button{
+  border-top: .5px solid rgba(208, 208, 208, 0.45);
+  border-bottom: .5px solid rgba(208, 208, 208, 0.2);
+  background: #1C2636;
+  @apply rounded shadow-xl px-6 py-3
+}
