@@ -9,7 +9,7 @@ const blogChildRoute: Routes =[
   {
     path:'',
     loadChildren:()=>import('./blog/blog.module').then(m=>m.BlogModule),
-    canActivate: [AuthGuard]
+//     canActivate: [AuthGuard]
   }
 ]
 
